@@ -25,11 +25,11 @@ export default defineConfig({
               link: '/docs'
             },
             {
-              text: "Explore Data",
-              link: '/docs/demo'
+              text: "Features",
+              link: '/docs/features'
             },
             {
-              text: "API Endpoints",
+              text: "API Docs",
               link: '/docs/api'
             }
           ]
