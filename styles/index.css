@@ -66,10 +66,15 @@ img[alt*="Founders"] {
 
 
 .text-subtitle {
-    font-size: 600%;
+    font-size: 400%;
     font-weight: 700;
 }
 
 .text-subtitle:first-letter {
     color: #1dc27c;
+}
+
+.rspress-home-hero-tagline {
+    font-size: 170%;
+    font-weight: 700;
 }
