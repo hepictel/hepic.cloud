@@ -1,0 +1,171 @@
+<br />
+
+_[heplify](https://github.com/sipcapture/HEPlify) is the quickest way to get started
+with hepic.cloud ingestion_
+
+### <div id="Installation">📦️ Installation</div>
+
+heplify is delivered as a single static binary for any X64 Linux distribution.
+
+<details>
+<summary>Manual Setup</summary>
+
+Download the [latests binary release](https://github.com/sipcapture/heplify/releases)
+
+```bash
+curl -fsSL github.com/sipcapture/heplify/releases/latest/download/heplify -O && chmod +x heplify
+```
+
+</details>
+<br/>
+<details>
+<summary>Package Setup</summary>
+### DEB Based OS
+Add the SIPCAPTURE repository: 
+
+```bash
+ curl -s https://packagecloud.io/install/repositories/qxip/sipcapture/script.deb.sh | sudo os=any dist=any bash
+```
+
+Install the Heplify package:
+
+```bash
+sudo apt-get update
+sudo apt-get install heplify
+```
+
+### RPM Based OS
+
+Add the SIPCAPTURE repository:
+
+```bash
+ curl -s https://packagecloud.io/install/repositories/qxip/sipcapture/script.rpm.sh | sudo os=rpm_any dist=rpm_any bash
+```
+
+Install the Heplify package:
+
+```bash
+ sudo yum install heplify
+```
+
+</details>
+<br/>
+
+### <div id="Usage">🛠️ Usage</div>
+
+<details>
+<summary>Heplify as a Sniffer</summary>
+
+> Capture IPv4/v6 SIP/RTCP packets with secure TLS transport to **hepic.cloud**
+
+<img style={{ maxWidth: "600px" }} src="https://i.imgur.com/72biA6Z.png" />
+
+You can run heplify on any VoIP Host (ie. asterisk, freeswitch) to passively sniff, correlate and encapsulate SIP/RTCP packets.
+
+The command below captures SIP/RTCP on all the interfaces available on the machine and send it over to **hepic.cloud** securely via TLS.
+
+ replace the unit file `/lib/systemd/system/heplify.service` with the following unit file
+
+```bash
+[Unit]
+Description=Captures packets from wire and sends them to Hepic
+After=network.target
+
+[Service]
+Environment="HEP_ID=9999"
+Environment="HEP_SERVER=HEP-ENDPOINT-Provided-on-Gigapipe-Portal"
+Environment="HEP_PASSWORD=HEP-TOKEN-Provide-on-Gigapipe-Portal"
+Environment="HEP_BUFFER_FILE=/root/HEP.dump"
+Environment="HEP_LOG_LEVEL=info"
+Environment="HEP_INTERFACE=any"
+Environment="HEP_PORTRANGE=5060-6000"
+Environment="HEP_PROM_STATS=0.0.0.0:8090"
+ExecStart=/usr/local/bin/heplify -hep-buffer-activate -hep-buffer-file $HEP_BUFFER_FILE -l $HEP_LOG_LEVEL -sl -hi $HEP_ID -i $HEP_INTERFACE -pr $HEP_PORTRANGE -hs $HEP_SERVER -nt tls -hp $HEP_PASSWORD -t af_packets -tcpsendretries 0 -tcpassembly -prometheus $HEP_PROM_STATS
+ExecStop=/bin/kill ${MAINPID}
+Restart=on-failure
+RestartSec=10s
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
+```
+  
+> Replace the **Envoirnmnet Variables** as per your systems settings. While
+> Replace **HEP_SERVER** with `HEP Endpoint` and **HEP_PASSWORD** with `HEP Token` provided in data ingestion tab.
+
+Start heplify
+    
+```bash
+systemctl daemon-reload
+systemctl start heplify
+```  
+   
+ It is best practice to specify a unique ID for each heplify instance, as this will allow engineers to identify the source of the captured call. The id specified in the above example via the -hi option is an integer within the range of 1-68520.
+
+> When using tcp transports heplify may batch multiple sniffed messages into one. To avoid this we recommend using the `-sipassembly true` option to have heplify parse messages to correctly separate them
+
+You are now ready to use heplify as a secure capture agent for any SIP/RTCP traffic on your host or network port spans.
+
+</details>
+<br/>
+<details>
+<summary>Heplify as a Relay/Collector</summary>
+
+> Ingest insecure **HEP UDP/TCP** packets and relay with secure **TLS** transport to **hepic.cloud**
+
+<img style={{ maxWidth: "600px" }} src="https://i.imgur.com/ZV0tUmT.png" />
+
+You can run heplify as a `HEP Collector` service to ingest insecure HEP traffic from existing HEP Agents _(ie: replacing a HOMER endpoint)_
+
+The example below starts heplify in **collector** mode listening for **HEP traffic** on `TCP port 9061` and forwarding to **hepic.cloud.**
+
+ replace the unit file `/lib/systemd/system/heplify.service` with the following unit file **(Heplify version must greater or equal 1.65.14)**
+
+ ```bash
+[Unit]
+Description=Captures packets from wire and sends them to Hepic
+After=network.target
+
+[Service]
+Environment="HEP_SERVER=HEP-ENDPOINT-Provided-on-Gigapipe-Portal"
+Environment="HEP_PASSWORD=HEP-TOKEN-Provide-on-Gigapipe-Portal"
+Environment="HEP_COLLECTOR=tcp:0.0.0.0:9061"
+Environment="HEP_BUFFER_FILE=/root/HEP.dump"
+Environment="HEP_LOG_LEVEL=info"
+Environment="HEP_PROM_STATS=0.0.0.0:8090"
+ExecStart=/usr/local/bin/heplify -hep-buffer-activate -hep-buffer-file $HEP_BUFFER_FILE -l $HEP_LOG_LEVEL -sl -hin $HEP_COLLECTOR -hs $HEP_SERVER -hp $HEP_PASSWORD -nt tls -tcpsendretries 0 -tcpassembly -prometheus $HEP_PROM_STATS
+ExecStop=/bin/kill ${MAINPID}
+Restart=on-failure
+RestartSec=10s
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
+```
+  
+> Replace the **Envoirnmnet Variables** as per your systems settings. While
+> Replace **HEP_SERVER** with `HEP Endpoint` and **HEP_PASSWORD** with `HEP Token` provided in data ingestion tab.
+  
+Start heplify service with the following commands
+  
+```bash
+systemctl daemon-reload
+systemctl start heplify
+```
+ 
+ confirm heplify service status
+ ```bash
+ systemctl status heplify
+ ```
+ verify if heplify is listening of specified port which is `9061` as per this KB settings. 
+ ```bash
+ ss -nlp | grep 9061
+ ```
+ > tcp   LISTEN 0      4096                                            *:9061                   *:*     users:(("heplify",pid=776,fd=16))
+ 
+Now the next step is to point all HEP Agents / rtpagents over `TCP` to this IP and Port (`9061`) so that heplify can further send `HEP` traffic securely to hepic.cloud through public networks. It is best practice to specify a unique ID for each HEP Agent / rtpagent, as this will allow engineers to identify the source of the captured call.
+
+ 
+> You are now ready to use **heplify** as endpoint for any **HEP Agents** such as Kamailio, OpenSIPS, Freeswitch, Asterisk, Drachtio, RTP:Engine, RTPProxy and many more.
+
+</details>
