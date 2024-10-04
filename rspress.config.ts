@@ -69,11 +69,6 @@ export default defineConfig({
         mode: 'link',
         content: 'https://sipcapture.org',
       },
-      {
-        icon: { svg: `<image src="/qxip_little.png" />`},
-        mode: 'link',
-        content: 'https://qxip.net',
-      },
     ],
   },
 });
