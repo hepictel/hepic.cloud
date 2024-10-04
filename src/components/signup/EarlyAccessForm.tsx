@@ -63,10 +63,10 @@ export default function EarlyAccessForm() {
   }
 
   const columnLeft: React.CSSProperties = {
-    flex: 0 1 30%;
+    flex: '0 1 30%';
   }
   const columnRight: React.CSSProperties = {
-    flex: 1 0 70%;
+    flex: '1 0 70%';
   }
 
   const formStyle: React.CSSProperties = {
