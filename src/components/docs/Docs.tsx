@@ -14,7 +14,7 @@ const Docs = () => {
                         tagline: "Next-Gen Telecom Observability",
                         actions: [
                             { text: "About Us", link: "/about", theme: "alt" },
-                            { text: "Features", link: "/docs/feature", theme: "alt" },
+                            { text: "Features", link: "/docs/features", theme: "alt" },
                             { text: "Book a Demo", link: "/signup", theme: "brand" },
                         ],
                         image: {
