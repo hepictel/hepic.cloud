@@ -1,0 +1,156 @@
+<br/>
+ _**RTPAgent** is the best agent in our fleet, designed to capture both call and media analytics in hepic.cloud_
+
+
+### <div id="Installation">📦️ Installation</div>
+
+RTPAgent is commercial package available for any modern X64 Linux distribution, and requires activations keys.
+
+If you don't have access to RTPAgent on your system, please [contact support](mailto:tickets@gigapipe.com) for assistance.
+
+
+### <div id="Usage">🛠️ Usage</div>
+<details>
+<summary>RTPAgent as a Sniffer</summary>
+
+_Capture IPv4/v6 SIP/ISUP and RTP/RTCP packets and send to relay/collector (HEPLIFY) which will ship these packets to hepic.cloud over secure TLS._
+
+_Read HEPLIFY docs for installation and configurations._
+
+RTPAgents will passively sniff and encapsulate for transport. Our engineers would love to assist you in making sure your traffic is correctly captured. 
+Simply shoot us an email via [contact support](mailto:tickets@gigapipe.com).
+
+_**Configure RTPAgent Transport**_
+
+To configure RTPAgent, follow the below instructions.
+
+The critical parameters are:
+
+- **capture-host**: Your HEPLIFY endpoint goes here.
+
+- **capture-port**: Leave this set to Port '9061'.
+
+- **capture-proto**: Leave this set to 'tcp'.
+
+- **capture-id**: An integer value that can identify the Agent that captured this traffic.
+
+_**NOTE:** Parameters such as `capture-password` and `payload-compression` are currently only used in advanced deployments and can be ignored for standard setups._
+
+The Agent transport configuration file is located at **/usr/local/rtpagent/etc/transport_hep.xml**:
+
+```xml
+<?xml version="1.0"?>
+<document type="captagent_module/xml">
+    <module name="transport_hep" description="HEP Protocol" serial="2014010402">
+        <profile name="hepsocket" description="Transport HEP" enable="true" serial="2014010402">
+            <settings>
+                <param name="version" value="3"/>
+                <param name="capture-host" value="<HEPLIFY ENDPOINT>"/>
+                <param name="capture-password" value="myhep"/>
+                <param name="capture-port" value="9061"/>
+                <param name="capture-proto" value="tcp"/>
+                <param name="capture-id" value="1234"/>
+            </settings>
+        </profile>
+	</module>
+</document>
+```
+
+>It is best practice to specify a unique ID for each RTPAgent instance, as this will allow engineers to identify the source of the captured sessions. The id is specified in the above example via the "capture-id" parameter and is an integer within the range of 1-68520.
+
+Restart RTPAgent and monitor it's status to ensure it is up and running.
+</details>
+<br/>
+<details>
+<summary>RTPAgent as a Relay/Collector</summary>
+
+> Ingest insecure HEP UDP/TCP packets and relay with secure TLS transport to hepic.cloud
+
+You can also run RTPAgent as a "HEP Collector" service to ingest insecure HEP traffic from existing HEP Agents  _(ie: replacing a HOMER endpoint)_
+
+Please ensure you have configured the RTPAgent transport (see 'RTPAgent as Sniffer' Section)
+
+The Agent collector configuration file is located at **/usr/local/rtpagent/etc/socket_collector.xml**:
+
+```xml
+<?xml version="1.0"?>
+<document type="captagent_module/xml">
+    <module name="socket_collector" description="Collector Socket" serial="2014010402">
+	<profile name="socketcollector" description="Collector local" enable="true" serial="2014010402">
+	    <settings>
+		<param name="host" value="0.0.0.0"/>
+		<param name="port" value="9070"/>
+		<param name="proto" value="udp"/>
+		<param name="enable-hep" value="true"/>
+		<param name="capture-plan" value="collector_hep_capture_plan.cfg"/>
+	    </settings>
+	</profile>
+    </module>
+</document>
+```
+
+Enable the module socket_collector also on rtpagent.xml, 
+uncommenting the ``<load module="socket_collector" register="local"/> `` line, 
+located at ``/usr/local/rtpagent/etc/rtpagent.xml``
+
+```xml
+<?xml version="1.0"?>
+<document type="captagent/xml">
+	<configuration name="core.conf" description="CORE Settings" serial="2014024212">
+		<settings>
+			<param name="debug" value="1" />
+			<param name="version" value="2" />
+			<param name="serial" value="2014056501" />
+			<param name="uuid" value="00781a4a-5b69-11e4-9522-bb79a8fcf0f3" />
+			<param name="daemon" value="false" />
+			<param name="syslog" value="true" />
+			<param name="node" value="node" />
+			<param name="pid_file" value="/var/run/rtpagent.pid" />
+			<param name="module_path" value="/usr/local/rtpagent/lib/rtpagent/modules" />
+			<param name="module_include_path" value="/usr/local/rtpagent/etc/modules.d" />
+			<param name="config_path" value="/usr/local/rtpagent/etc/" />
+			<param name="capture_plans_path" value="/usr/local/rtpagent/etc/captureplans" />
+			<param name="filter_plans_path" value="/usr/local/rtpagent/etc/filterplans" />
+			<param name="backup" value="/usr/local/rtpagent/backup" />
+			<param name="chroot" value="/var/lib/captagent" />
+			<param name="license" value="0000-0000-0000-0000-0000-0000" />
+		</settings>
+	</configuration>
+	<configuration name="modules.conf" description="Modules">
+		<modules>
+			<!-- utilities filter -->
+			<!-- <load module="utility_filter" register="local"/> -->
+			<!-- interface lic -->
+			<!-- <load module="interface_lic" register="local"/> -->
+			<!-- ANOTHER -->
+			<!-- <load module="transport_json" register="local"/> -->
+			<load module="transport_hep" register="local" />
+			<!-- database -->
+			<load module="database_hash" register="local" />
+			<!-- <load module="database_li" register="local"/> -->
+			<load module="database_rtp" register="local" />
+			<!-- protocol (must be before socket) -->
+			<load module="protocol_sip" register="local" />
+			<!-- <load module="protocol_rtcp" register="local"/> -->
+			<!-- <load module="protocol_ngcp" register="local"/> -->
+			<!-- <load module="protocol_diameter" register="local"/> -->
+			<!-- <load module="protocol_rtpproxy" register="local"/> -->
+			<!-- <load module="protocol_rtsp" register="local"/> -->
+			<load module="protocol_rtp" register="local" />
+			<!-- socket -->
+			<!-- <load module="socket_corelatus" register="local"/> -->
+			<load module="socket_collector" register="local" />
+			<!-- <load module="socket_raw" register="local"/> -->
+			<load module="socket_pcap" register="local" />
+			<!-- interface -->
+			<load module="interface_http" register="local" />
+		</modules>
+	</configuration>
+</document>
+```
+> Note: It is mandatory to load the protocol modules BEFORE the socket modules.
+
+> Note: the collector method requires a working HEP/TLS transport configuration to relay HEP messages
+
+Restart RTPAgent traffic sent to the RTPAgent will now be relayed via the transport defined in the step before.
+</details>
