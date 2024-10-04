@@ -88,3 +88,7 @@ img[alt*="Founders"] {
 img {
     border-radius: 15px;
 }
+
+.medium-zoom-image {
+    pointer-events: none;
+}
