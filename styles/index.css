@@ -28,12 +28,14 @@
     font-size: 2.5rem;
 }
 
+/*
 body {
     background-image: url("https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/header-bg-optimised-scaled-4.jpg");
     background-blend-mode: lighten;
     background-repeat: no-repeat;
  
 }
+*/
 
 img[alt*="hepic.cloud"] {
     animation-name: floating;
