@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import SmoothIframe from '../src/components/SmoothIframe'
+import SmoothIframe from '../../../src/components/SmoothIframe'
 
 export default function EarlyAccessForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
