@@ -6,11 +6,12 @@ const Docs = () => {
         <div style={{ position: "absolute", width: "100%", left: 0, top: 75 }}>
             <HomeHero
                 frontmatter={{
-                    title: "hepic",
-                    titleSuffix: "Telecom Observability",
+                    title: "hepic.cloud",
+                    tagline: "Next-Gen VoIP/RTC Monitoring & Troubleshooting",
                     hero: {
-                        name: "hepic",
+                        name: "",
                         text: "<p className='text-3xl'>Telecom Observability</p>",
+                        titleSuffix: "Next-Gen VoIP Monitoring",
                         actions: [
                             { text: "About", link: "/about", theme: "alt" },
                             { text: "Book Demo", link: "/signup", theme: "brand" },
