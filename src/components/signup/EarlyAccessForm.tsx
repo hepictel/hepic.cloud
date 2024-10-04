@@ -104,7 +104,7 @@ export default function EarlyAccessForm() {
   return (
     <div style={containerStyle}>
       <div style={columnLeft}>
-        <h2>Request Early Access</h2>
+        <h2>Request Early Access</h2><br/>
         <form onSubmit={handleSubmit} style={formStyle}>
           <input
             type="text"
@@ -170,7 +170,7 @@ export default function EarlyAccessForm() {
         </form>
       </div>
       <div style={columnRight}>
-        <h2>Too Curious? Here's a quick interactive demonstration.</h2>
+        <h2>Too Curious? Here's a quick interactive demonstration.</h2><br/>
         <SmoothIframe src="https://demo.arcade.software/KGk0X0tSaMv7opJjHbDj?embed" height="550px" />
       </div>
     </div>
