@@ -11,10 +11,10 @@ const Docs = () => {
                     hero: {
                         name: "",
                         text: "<p className='text-subtitle'>hepic.</p>",
-                        tagline: "Telecom Observability",
+                        tagline: "Next-Gen Telecom Observability",
                         actions: [
-                            { text: "About", link: "/about", theme: "alt" },
-                            { text: "Book Demo", link: "/signup", theme: "brand" },
+                            { text: "About Us", link: "/about", theme: "alt" },
+                            { text: "Book a Demo", link: "/signup", theme: "brand" },
                         ],
                         image: {
                             src: "/hepic_cloud_logo.png",
