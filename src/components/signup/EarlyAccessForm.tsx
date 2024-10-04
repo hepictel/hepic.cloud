@@ -53,7 +53,7 @@ export default function EarlyAccessForm() {
     display: 'flex',
     justifyContent: 'space-between',
     gap: '2rem',
-    maxWidth: '100%',
+    minWidth: '130%',
     margin: '0 auto',
     padding: '0rem',
   }
