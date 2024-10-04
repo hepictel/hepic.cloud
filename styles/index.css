@@ -65,13 +65,11 @@ img[alt*="Founders"] {
 }
 
 
-.nd-logo {
-    line-height: 100%;
+.text-subtitle {
     font-size: 600%;
-    color: #fff;
     font-weight: 700;
 }
 
-.nd-logo:first-letter {
+.text-subtitle:first-letter {
     color: #1dc27c;
 }
