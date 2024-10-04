@@ -18,7 +18,7 @@ const Docs = () => {
                             { text: "Signup", link: "/signup", theme: "brand" },
                         ],
                         image: {
-                            src: "/hepic_cloud.svg",
+                            src: "/hepic_cloud_logo.svg",
                             alt: "hepic.cloud",
                         },
                     },
