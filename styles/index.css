@@ -79,3 +79,7 @@ img[alt*="Founders"] {
     font-size: 170%;
     font-weight: 700;
 }
+
+.rspress-home-feature-icon {
+    margin-bottom: 25px;
+}
