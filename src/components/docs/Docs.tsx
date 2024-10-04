@@ -7,7 +7,7 @@ const Docs = () => {
             <HomeHero
                 frontmatter={{
                     title: "hepic",
-                    titleSuffix: "Polyglot Observability",
+                    titleSuffix: "Telecom Observability",
                     hero: {
                         name: "hepic.cloud",
                         text: "<p className='text-3xl'>Polyglot Observability</p>",
@@ -15,7 +15,7 @@ const Docs = () => {
                         actions: [
                             { text: "About", link: "/about", theme: "alt" },
                             { text: "Plans", link: "/pricing", theme: "alt" },
-                            { text: "Signup", link: "/signup", theme: "brand" },
+                            { text: "Book Demo", link: "/signup", theme: "brand" },
                         ],
                         image: {
                             src: "/hepic_cloud_logo.svg",
