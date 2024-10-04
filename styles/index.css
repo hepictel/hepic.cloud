@@ -65,7 +65,6 @@ img[alt*="Founders"] {
     100%   { transform: translate(0, -0px); }    
 }
 
-
 .text-subtitle {
     font-size: 400%;
     font-weight: 700;
@@ -82,4 +81,8 @@ img[alt*="Founders"] {
 
 .rspress-home-feature-icon {
     margin-bottom: 25px;
+}
+
+img {
+    border-radius: 15px;
 }
