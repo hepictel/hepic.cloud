@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import SmoothIframe from '../src/components/SmoothIframe'
 
 export default function EarlyAccessForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -12,23 +13,18 @@ export default function EarlyAccessForm() {
     comments: ''
   })
 
-  const handleChange = (e:any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
-    setFormData(prevData => ({
-      ...prevData,
-      [name]: value
-    }))
+    setFormData(prevData => ({ ...prevData, [name]: value }))
   }
 
   const isFormValid = () => {
     return formData.name && formData.company && formData.email && formData.package
   }
 
-
   const FORM_URL = "https://script.google.com/macros/s/AKfycbypIQWKvFDiAVAQZZCWlFGdU61YdXr9WKLHrH7DJqnC7fURvKX4qBu0W4dzmaEu3Yx69g/exec"
-  // const FORM_URL = "https://public.herotofu.com/v1/469dc240-819c-11ef-9cd5-83be6ab60c60"
-  
-  const handleSubmit = async (event:any) => {
+
+  const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault()
     setIsSubmitting(true)
 
@@ -53,98 +49,122 @@ export default function EarlyAccessForm() {
     }
   }
 
-  const formStyle = {
+  const containerStyle: React.CSSProperties = {
+    display: 'flex',
+    justifyContent: 'space-between',
+    gap: '2rem',
+    maxWidth: '1000px',
+    margin: '0 auto',
+    padding: '2rem',
+  }
+
+  const columnStyle: React.CSSProperties = {
+    flex: 1,
+  }
+
+  const formStyle: React.CSSProperties = {
     display: 'flex',
     flexDirection: 'column',
     gap: '1rem',
-    maxWidth: '400px',
-    alignItems: 'flex-start'
+    alignItems: 'flex-start',
   }
 
-  const inputStyle = {
+  const inputStyle: React.CSSProperties = {
     padding: '0.5rem',
     borderRadius: '4px',
     border: '1px solid #ccc',
-    width: '100%'
+    width: '100%',
   }
 
-  const buttonStyle = {
+  const buttonStyle: React.CSSProperties = {
     padding: '0.5rem 1rem',
     backgroundColor: '#0070f3',
     color: 'white',
     border: 'none',
     borderRadius: '4px',
-    cursor: 'pointer'
+    cursor: 'pointer',
   }
 
   if (isSubmitted) {
-    return React.createElement('div', { style: { marginTop: '2rem' } },
-      React.createElement('h2', null, "Thank you for your request! We will be in touch soon!")
+    return (
+      <div style={{ marginTop: '2rem', textAlign: 'center' }}>
+        <h2>Thank you for your request! We will be in touch soon!</h2>
+      </div>
     )
-  } 
-  
-  return React.createElement('form', { onSubmit: handleSubmit, style: formStyle },
-    React.createElement('input', {
-      type: 'text',
-      name: 'name',
-      placeholder: 'Name *',
-      required: true,
-      value: formData.name,
-      onChange: handleChange,
-      style: inputStyle
-    }),
-    React.createElement('input', {
-      type: 'text',
-      name: 'company',
-      placeholder: 'Company *',
-      required: true,
-      value: formData.company,
-      onChange: handleChange,
-      style: inputStyle
-    }),
-    React.createElement('input', {
-      type: 'email',
-      name: 'email',
-      placeholder: 'Business Email *',
-      required: true,
-      value: formData.email,
-      onChange: handleChange,
-      style: inputStyle
-    }),
-    React.createElement('input', {
-      type: 'tel',
-      name: 'phone',
-      placeholder: 'Phone Number (Optional)',
-      value: formData.phone,
-      onChange: handleChange,
-      style: inputStyle
-    }),
-    React.createElement('select', {
-      name: 'package',
-      required: true,
-      value: formData.package,
-      onChange: handleChange,
-      style: inputStyle
-    },
-      React.createElement('option', { value: '' }, 'Select a package *'),
-      React.createElement('option', { value: 'basic' }, 'Basic'),
-      React.createElement('option', { value: 'medium' }, 'Medium'),
-      React.createElement('option', { value: 'large' }, 'Large')
-    ),
-    React.createElement('textarea', {
-      name: 'comments',
-      placeholder: 'Comments (Optional)',
-      value: formData.comments,
-      onChange: handleChange,
-      style: { ...inputStyle, minHeight: '100px' }
-    }),
-    React.createElement('button', {
-      type: 'submit',
-      disabled: isSubmitting || !isFormValid(),
-      style: {
-        ...buttonStyle,
-        opacity: isSubmitting || !isFormValid() ? 0.5 : 1
-      }
-    }, isSubmitting ? 'Submitting...' : 'Request Early Access')
+  }
+
+  return (
+    <div style={containerStyle}>
+      <div style={columnStyle}>
+        <h2>Request Early Access</h2>
+        <form onSubmit={handleSubmit} style={formStyle}>
+          <input
+            type="text"
+            name="name"
+            placeholder="Name *"
+            required
+            value={formData.name}
+            onChange={handleChange}
+            style={inputStyle}
+          />
+          <input
+            type="text"
+            name="company"
+            placeholder="Company *"
+            required
+            value={formData.company}
+            onChange={handleChange}
+            style={inputStyle}
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Business Email *"
+            required
+            value={formData.email}
+            onChange={handleChange}
+            style={inputStyle}
+          />
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Phone Number (Optional)"
+            value={formData.phone}
+            onChange={handleChange}
+            style={inputStyle}
+          />
+          <select
+            name="package"
+            required
+            value={formData.package}
+            onChange={handleChange}
+            style={inputStyle}
+          >
+            <option value="">Current Status *</option>
+            <option value="basic">No Monitoring</option>
+            <option value="medium">Monitoring, HOMER</option>
+            <option value="large">Monitoring, Other Vendor</option>
+          </select>
+          <textarea
+            name="comments"
+            placeholder="Comments (Optional)"
+            value={formData.comments}
+            onChange={handleChange}
+            style={{ ...inputStyle, minHeight: '100px' }}
+          />
+          <button
+            type="submit"
+            disabled={isSubmitting || !isFormValid()}
+            style={{ ...buttonStyle, opacity: isSubmitting || !isFormValid() ? 0.5 : 1 }}
+          >
+            {isSubmitting ? 'Submitting...' : 'Request Early Access'}
+          </button>
+        </form>
+      </div>
+      <div style={columnStyle}>
+        <h2>Here's a quick demonstration</h2>
+        <SmoothIframe src="https://demo.arcade.software/KGk0X0tSaMv7opJjHbDj?embed" height="550px" />
+      </div>
+    </div>
   )
 }
