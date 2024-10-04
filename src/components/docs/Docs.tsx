@@ -7,11 +7,11 @@ const Docs = () => {
             <HomeHero
                 frontmatter={{
                     title: "hepic.cloud",
-                    tagline: "Next-Gen VoIP/RTC Monitoring & Troubleshooting",
+                    titleSuffix: "Next-Gen VoIP Monitoring & Troubleshooting",
                     hero: {
                         name: "",
                         text: "<p className='text-3xl'>Telecom Observability</p>",
-                        titleSuffix: "Next-Gen VoIP Monitoring",
+                        tagline: "Next-Gen VoIP/RTC Monitoring",
                         actions: [
                             { text: "About", link: "/about", theme: "alt" },
                             { text: "Book Demo", link: "/signup", theme: "brand" },
