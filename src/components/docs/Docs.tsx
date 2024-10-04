@@ -6,10 +6,10 @@ const Docs = () => {
         <div style={{ position: "absolute", width: "100%", left: 0, top: 75 }}>
             <HomeHero
                 frontmatter={{
-                    title: "Gigapipe Home",
+                    title: "hepic.cloud",
                     titleSuffix: "Polyglot Observability",
                     hero: {
-                        name: "Gigapipe",
+                        name: "hepic.cloud",
                         text: "<p className='text-3xl'>Polyglot Observability</p>",
                         tagline: "Just Logs, Metrics, Traces & Profiles",
                         actions: [
@@ -18,8 +18,8 @@ const Docs = () => {
                             { text: "Signup", link: "/signup", theme: "brand" },
                         ],
                         image: {
-                            src: "/logo.svg",
-                            alt: "Gigapipe",
+                            src: "/hepic_cloud.svg",
+                            alt: "hepic.cloud",
                         },
                     },
                 }}
@@ -28,8 +28,8 @@ const Docs = () => {
 
             <HomeFeature
                 frontmatter={{
-                    title: "Gigapipe Features",
-                    titleSuffix: "Docs Main Test",
+                    title: "Hepic Features",
+                    titleSuffix: "hepic.cloud",
                     features: [
                         {
                             title: "Polyglot",
