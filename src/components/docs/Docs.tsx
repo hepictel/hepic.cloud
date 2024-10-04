@@ -10,8 +10,8 @@ const Docs = () => {
                     titleSuffix: "Next-Gen VoIP Monitoring & Troubleshooting",
                     hero: {
                         name: "hepic.",
-                        text: "<p className='text-subtitle'>Telecom Observability</p>",
-                        tagline: "Next-Gen VoIP/RTC Monitoring",
+                        text: "<p className='text-subtitle'>hepic.</p>",
+                        tagline: "Telecom Observability",
                         actions: [
                             { text: "About", link: "/about", theme: "alt" },
                             { text: "Book Demo", link: "/signup", theme: "brand" },
