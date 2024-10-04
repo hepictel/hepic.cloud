@@ -104,7 +104,7 @@ export default function EarlyAccessForm() {
   return (
     <div style={containerStyle}>
       <div style={columnLeft}>
-        <h2>Request Early Access</h2><br/>
+        <h2>Please provide your details</h2><br/>
         <form onSubmit={handleSubmit} style={formStyle}>
           <input
             type="text"
@@ -165,7 +165,7 @@ export default function EarlyAccessForm() {
             disabled={isSubmitting || !isFormValid()}
             style={{ ...buttonStyle, opacity: isSubmitting || !isFormValid() ? 0.5 : 1 }}
           >
-            {isSubmitting ? 'Submitting...' : 'Request Early Access'}
+            {isSubmitting ? 'Submitting...' : 'Request Demo Session'}
           </button>
         </form>
       </div>
