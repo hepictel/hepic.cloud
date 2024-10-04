@@ -1,7 +1,7 @@
 
 # 🔻 API Documentation
 
-> Scroll down for code samples, example requests and responses. Select a language for code samples from the tabs above or the mobile navigation menu.
+This section provides code samples, example requests and responses for the hepic API
 
 ## Base URLs
 
