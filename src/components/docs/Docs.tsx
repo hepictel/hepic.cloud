@@ -34,7 +34,7 @@ const Docs = () => {
                         {
                             title: "Realtime",
                             details:
-                                "<p className='text-center'>Real-Time Search, Tracking, Analytics</p>",
+                                "<p className='text-center'>Real-Time VoIP Search, Tracking and Analytics</p>",
                             icon: "📞",
                             span: 3,
                         },
@@ -49,7 +49,7 @@ const Docs = () => {
                         {
                             title: "Unmetered",
                             details:
-                                "<p className='text-center'>Unlimited packets per Server. No soft limiters.</p>",
+                                "<p className='text-center'>Unlimited packets per Server. Only limited by resources.</p>",
                             icon: "💸",
                             span: 3,
                         },
