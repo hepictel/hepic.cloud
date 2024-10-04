@@ -62,6 +62,13 @@ export default function EarlyAccessForm() {
     flex: 1,
   }
 
+  const columnLeft: React.CSSProperties = {
+    flex: 0 1 30%;
+  }
+  const columnRight: React.CSSProperties = {
+    flex: 1 0 70%;
+  }
+
   const formStyle: React.CSSProperties = {
     display: 'flex',
     flexDirection: 'column',
@@ -95,7 +102,7 @@ export default function EarlyAccessForm() {
 
   return (
     <div style={containerStyle}>
-      <div style={columnStyle}>
+      <div style={columnLeft}>
         <h2>Request Early Access</h2>
         <form onSubmit={handleSubmit} style={formStyle}>
           <input
@@ -161,8 +168,8 @@ export default function EarlyAccessForm() {
           </button>
         </form>
       </div>
-      <div style={columnStyle}>
-        <h2>Here's a quick demonstration</h2>
+      <div style={columnRight}>
+        <h2>Too Curious? Here's a quick interactive demonstration.</h2>
         <SmoothIframe src="https://demo.arcade.software/KGk0X0tSaMv7opJjHbDj?embed" height="550px" />
       </div>
     </div>
