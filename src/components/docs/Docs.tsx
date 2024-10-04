@@ -9,7 +9,7 @@ const Docs = () => {
                     title: "hepic.cloud",
                     titleSuffix: "Next-Gen VoIP Monitoring & Troubleshooting",
                     hero: {
-                        name: "",
+                        name: "hepic.",
                         text: "<p className='text-3xl'>Telecom Observability</p>",
                         tagline: "Next-Gen VoIP/RTC Monitoring",
                         actions: [
