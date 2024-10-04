@@ -64,3 +64,14 @@ img[alt*="Founders"] {
     100%   { transform: translate(0, -0px); }    
 }
 
+
+.nd-logo {
+    line-height: 100%;
+    font-size: 600%;
+    color: #fff;
+    font-weight: 700;
+}
+
+.nd-logo:first-letter {
+    color: #1dc27c;
+}
