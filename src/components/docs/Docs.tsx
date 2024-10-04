@@ -11,10 +11,8 @@ const Docs = () => {
                     hero: {
                         name: "hepic",
                         text: "<p className='text-3xl'>Telecom Observability</p>",
-                        tagline: "Next-Gen VoIP/RTC Monitoring & Troubleshooting",
                         actions: [
                             { text: "About", link: "/about", theme: "alt" },
-                            { text: "Plans", link: "/pricing", theme: "alt" },
                             { text: "Book Demo", link: "/signup", theme: "brand" },
                         ],
                         image: {
