@@ -25,11 +25,11 @@ export default defineConfig({
               link: '/docs'
             },
             {
-              text: "Features",
+              text: "Core Features",
               link: '/docs/features'
             },
             {
-              text: "API Docs",
+              text: "API Documentation",
               link: '/docs/api'
             }
           ]
