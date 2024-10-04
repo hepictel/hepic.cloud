@@ -7,8 +7,8 @@ export default defineConfig({
     title: 'hepic.cloud',
   icon: "/hepic_cloud_logo.png",
   logo: {
-    light: "/hepic_cloud_logo.svg",
-    dark: "/hepic_cloud_logo.svg",
+    light: "/hepic_cloud_logo.png",
+    dark: "/hepic_cloud_logo.png",
   },
   description: 'hepic.cloud: telecom observability',
   
@@ -46,8 +46,8 @@ export default defineConfig({
       { text: "Book Demo", 
         link: "signup" 
       },
-      { text: "Blog", 
-        link: "https://blog.qryn.dev" 
+      { text: "Company", 
+        link: "https://qxip.net" 
       },
       { text: "Contact", 
         link: "mailto://info@qxip.net" 
@@ -65,9 +65,9 @@ export default defineConfig({
         content: 'https://www.linkedin.com/company/qxip',
       },
       {
-        icon: { svg: `<image src="https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/qryn.png" style="filter: grayscale(1);"/>`},
+        icon: { svg: `<image src="https://user-images.githubusercontent.com/1423657/55069501-8348c400-5084-11e9-9931-fefe0f9874a7.png" style="filter: grayscale(1);"/>`},
         mode: 'link',
-        content: 'https://blog.qryn.dev',
+        content: 'https://sipcapture.org',
       },
     ],
   },
