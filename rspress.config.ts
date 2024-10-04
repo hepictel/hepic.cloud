@@ -40,17 +40,14 @@ export default defineConfig({
       ]
     },
     nav: [
-      { text: "About", 
+      { text: "About Us", 
         link: "about" 
       },
-      { text: "Book Demo", 
+      { text: "Demo Request", 
         link: "signup" 
       },
       { text: "Documentation", 
         link: "docs" 
-      },
-      { text: "Company", 
-        link: "https://qxip.net" 
       },
       { text: "Contact", 
         link: "mailto://info@qxip.net" 
@@ -71,6 +68,11 @@ export default defineConfig({
         icon: { svg: `<image src="https://user-images.githubusercontent.com/1423657/55069501-8348c400-5084-11e9-9931-fefe0f9874a7.png" style="filter: grayscale(1);"/>`},
         mode: 'link',
         content: 'https://sipcapture.org',
+      },
+      {
+        icon: { svg: `<image src="/qxip_little.png" />`},
+        mode: 'link',
+        content: 'https://qxip.net',
       },
     ],
   },
