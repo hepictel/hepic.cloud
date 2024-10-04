@@ -43,14 +43,8 @@ export default defineConfig({
       { text: "About", 
         link: "about" 
       },
-      { text: "Plans", 
-        link: "pricing" 
-      },
-      { text: "Sign Up", 
+      { text: "Book Demo", 
         link: "signup" 
-      },
-      { text: "Docs", 
-        link: "docs" 
       },
       { text: "Blog", 
         link: "https://blog.qryn.dev" 
