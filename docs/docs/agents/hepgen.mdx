@@ -1,0 +1,25 @@
+<br/>
+_**Hepgen** is a mock HEP generator ideal to validate connectivity and functionality of hepic.cloud without real traffic._
+### <div id="Installation">📦️ Installation</div>
+
+Install **hepgen.js** via npm and go to the directory:
+
+```bash
+git clone https://github.com/sipcapture/hepgen.js
+cd hepgen.js
+npm install
+```
+
+### <div id="Usage">🛠️ Usage</div>
+**Direct TLS**
+
+Generate a mock HEP session directly into hepic.cloud using tls and HEP authentication.
+
+Replace `Token` and `HEP Endpoint` with the actual information from the data ingestion tab.
+
+```bash
+export CAPTUREPASS=[Token] 
+./hepgen.js  -t tls  -s [HEP Endpoint] -p 9443 -c ./config/b2bcall_rtp_multi.js
+```
+
+Access the hepic.cloud UI and find the mocked call using the Call-ID or any other session detail.
