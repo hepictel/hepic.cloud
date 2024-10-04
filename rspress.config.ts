@@ -46,6 +46,9 @@ export default defineConfig({
       { text: "Book Demo", 
         link: "signup" 
       },
+      { text: "Features", 
+        link: "features" 
+      },
       { text: "Company", 
         link: "https://qxip.net" 
       },
