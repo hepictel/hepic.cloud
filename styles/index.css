@@ -19,6 +19,10 @@
     color-scheme: dark light;
 }
 
+.rspress-logo {
+    height: 3.6rem;
+}
+
 body {
     background-image: url("https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/header-bg-optimised-scaled-4.jpg");
     background-blend-mode: lighten;
@@ -26,7 +30,7 @@ body {
  
 }
 
-img[alt*="Gigapipe"] {
+img[alt*="hepic.cloud"] {
     animation-name: floating;
     animation-duration: 3s;
     animation-iteration-count: infinite;
