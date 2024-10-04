@@ -7,8 +7,8 @@ export default defineConfig({
     title: 'hepic.cloud',
   icon: "/hepic_cloud_logo.png",
   logo: {
-    light: "/hepic_cloud.svg",
-    dark: "/hepic_cloud.svg",
+    light: "/hepic_logo.svg",
+    dark: "/hepic_logo.svg",
   },
   description: 'hepic.cloud: telecom observability',
   
