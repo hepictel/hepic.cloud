@@ -6,7 +6,7 @@ const Docs = () => {
         <div style={{ position: "absolute", width: "100%", left: 0, top: 75 }}>
             <HomeHero
                 frontmatter={{
-                    title: "hepic.cloud",
+                    title: "hepic",
                     titleSuffix: "Polyglot Observability",
                     hero: {
                         name: "hepic.cloud",
@@ -32,10 +32,10 @@ const Docs = () => {
                     titleSuffix: "hepic.cloud",
                     features: [
                         {
-                            title: "Polyglot",
+                            title: "Realtime",
                             details:
-                                "<p className='text-center'>Drop-in Loki, Prometheus, Tempo, Pyroscope compatible</p>",
-                            icon: "<img src='https://raw.githubusercontent.com/gigapipehq/homepage/refs/heads/main/docs/public/qryn.png' />",
+                                "<p className='text-center'>Real-Time Search, Tracking, Analytics</p>",
+                            icon: "📞",
                             span: 3,
                         },
                         {
@@ -49,15 +49,15 @@ const Docs = () => {
                         {
                             title: "Unmetered",
                             details:
-                                "<p className='text-center'>Flat cost Observability<br>Zero monthly suprises</p>",
+                                "<p className='text-center'>Unlimited packets per Server. No soft limiters.</p>",
                             icon: "💸",
                             span: 3,
                         },
 
                         {
-                            title: "Opensource",
+                            title: "Distributed",
                             details:
-                                "<p className='text-center'>Transparent, Open-Source,<br>Opentelemetry Native</p>",
+                                "<p className='text-center'>Horizontally Scalable, Distributed Queries</p>",
                             icon: "⚗️",
                             span: 3,
                         },
