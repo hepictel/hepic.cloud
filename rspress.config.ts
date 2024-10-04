@@ -5,10 +5,10 @@ export default defineConfig({
   root: 'docs',
   base: '/hepic.cloud/',
     title: 'hepic.cloud',
-  icon: "/logo.svg",
+  icon: "/hepic_cloud_logo.png",
   logo: {
-    light: "/gigapipe-logo-color.svg",
-    dark: "/Gigapipe-logo-outline@3x.svg",
+    light: "/hepic_cloud_logo.svg",
+    dark: "/hepic_cloud_logo.svg",
   },
   description: 'hepic.cloud: telecom observability',
   
