@@ -53,9 +53,9 @@ export default function EarlyAccessForm() {
     display: 'flex',
     justifyContent: 'space-between',
     gap: '2rem',
-    maxWidth: '1000px',
+    maxWidth: '100%',
     margin: '0 auto',
-    padding: '2rem',
+    padding: '0rem',
   }
 
   const columnStyle: React.CSSProperties = {
