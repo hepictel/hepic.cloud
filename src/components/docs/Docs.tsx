@@ -9,9 +9,9 @@ const Docs = () => {
                     title: "hepic",
                     titleSuffix: "Telecom Observability",
                     hero: {
-                        name: "hepic.cloud",
-                        text: "<p className='text-3xl'>Polyglot Observability</p>",
-                        tagline: "Just Logs, Metrics, Traces & Profiles",
+                        name: "hepic",
+                        text: "<p className='text-3xl'>Telecom Observability</p>",
+                        tagline: "Next-Gen VoIP/RTC Monitoring & Troubleshooting",
                         actions: [
                             { text: "About", link: "/about", theme: "alt" },
                             { text: "Plans", link: "/pricing", theme: "alt" },
@@ -28,7 +28,7 @@ const Docs = () => {
 
             <HomeFeature
                 frontmatter={{
-                    title: "Hepic Features",
+                    title: "Features",
                     titleSuffix: "hepic.cloud",
                     features: [
                         {
