@@ -199,19 +199,23 @@ const PricingCalculator: React.FC = () => {
       </div>
 
       <div className={styles.pricingSummary}>
-        <div className={styles.totalPrice}>
-          Total: €{totalPrice}/{isYearly ? 'year' : 'month'}
+        <div className={styles.totalPriceRow}>
+          <div className={styles.totalPrice}>
+            Total: €{totalPrice}/{isYearly ? 'year' : 'month'}
+          </div>
+          <a href="/signup" className={styles.signUpButton}>Sign Up</a>
         </div>
         <div className={styles.priceBreakdown}>
           Base plan: €{basePlanPrice}/{isYearly ? 'year' : 'month'}
           {extraStorage > 0 && ` + Extra storage: €${extraStorageCost}/${isYearly ? 'year' : 'month'}`}
           {includeSnapshots && ` + Snapshots: €${snapshotsCost}/${isYearly ? 'year' : 'month'}`}
         </div>
-        <div className={styles.savings}>
-          You save €{savings} per year with annual billing!
-        </div>
+        {!isTrial && (
+          <div className={styles.savings}>
+            You save €{savings} per year with annual billing!
+          </div>
+        )}
       </div>
-    </div>
   )
 }
 
