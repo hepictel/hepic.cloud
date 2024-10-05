@@ -92,3 +92,7 @@ img {
 .medium-zoom-image {
     pointer-events: none;
 }
+
+.md\:pt-16 {
+        padding-top: 1rem;
+}
