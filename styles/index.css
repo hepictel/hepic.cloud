@@ -102,6 +102,6 @@ img {
 }
 
 /* docs sidebar */
-div[class^='sidebarContent_']]{
+div[class*="sidebarContent"] {
     padding-top: 3em;
 }
