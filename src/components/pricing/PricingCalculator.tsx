@@ -18,7 +18,7 @@ const plans = [
     },
     price: {
       monthly: 499,
-      yearly: 5000
+      yearly: 4990
     }
   },
   {
@@ -32,7 +32,7 @@ const plans = [
     },
     price: {
       monthly: 999,
-      yearly: 10000
+      yearly: 9900
     }
   },
   {
@@ -46,7 +46,7 @@ const plans = [
     },
     price: {
       monthly: 1499,
-      yearly: 14000
+      yearly: 14900
     }
   }
 ]
