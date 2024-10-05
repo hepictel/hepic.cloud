@@ -210,12 +210,11 @@ const PricingCalculator: React.FC = () => {
           {extraStorage > 0 && ` + Extra storage: €${extraStorageCost}/${isYearly ? 'year' : 'month'}`}
           {includeSnapshots && ` + Snapshots: €${snapshotsCost}/${isYearly ? 'year' : 'month'}`}
         </div>
-        {!isTrial && (
-          <div className={styles.savings}>
-            You save €{savings} per year with annual billing!
-          </div>
-        )}
+        <div className={styles.savings}>
+          You save €{savings} per year with annual billing!
+        </div>
       </div>
+    </div>
   )
 }
 
