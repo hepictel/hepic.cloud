@@ -156,3 +156,24 @@ input:checked + .slider:before {
   white-space: nowrap;
   border-width: 0;
 }
+
+.totalPriceRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.signUpButton {
+  background-color: #0ccba1;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.signUpButton:hover {
+  background-color: #0ccba1;
+}
