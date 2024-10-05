@@ -21,11 +21,24 @@ export default defineConfig({
     sidebar: {
       '/docs/docs/':[
         {
-          text: "Documentation",
+          text: "Cloud",
           items: [
             {
               text: "Get Started",
               link: '/docs'
+            },
+            {
+              text: "Key Features",
+              link: '/docs/features'
+            },
+          ]
+        },
+        {
+          text: "On-Prem",
+          items: [
+            {
+              text: "Installation",
+              link: '/docs/onprem'
             },
             {
               text: "Key Features",
@@ -38,8 +51,6 @@ export default defineConfig({
           ]
           
         }
-      
-
       ]
     },
     nav: [
