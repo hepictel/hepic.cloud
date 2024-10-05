@@ -12,9 +12,9 @@ const plans = [
     disk: '640GB NVMe', 
     specs: {
       ram: '32GB RAM',
-      storage: '1 TB rotation',
+      storage: '1 TB Rotation',
       cpu: '8x Intel vCPU',
-      transfer: '16TB/Month Transfer'
+      transfer: '8TB/Month Transfer'
     },
     price: {
       monthly: 499,
@@ -26,9 +26,9 @@ const plans = [
     disk: '960GB NVMe',
     specs: {
       ram: '48GB RAM',
-      storage: '2 TB rotation',
-      cpu: '12x Intel vCPU',
-      transfer: '24TB/Month Transfer'
+      storage: '2 TB Rotation',
+      cpu: '10x Intel vCPU',
+      transfer: '16TB/Month Transfer'
     },
     price: {
       monthly: 999,
@@ -40,13 +40,13 @@ const plans = [
     disk: '1.2TB NVMe',
     specs: {
       ram: '64GB RAM',
-      storage: '4 TB rotation',
+      storage: '4 TB Rotation',
       cpu: '12x Intel vCPU',
-      transfer: '32TB/Month Transfer'
+      transfer: '24TB/Month Transfer'
     },
     price: {
-      monthly: 1499,
-      yearly: 14900
+      monthly: 1699,
+      yearly: 16900
     }
   }
 ]
