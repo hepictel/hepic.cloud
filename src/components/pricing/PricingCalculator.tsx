@@ -12,7 +12,7 @@ const plans = [
     disk: '640GB NVMe', 
     specs: {
       ram: '32GB RAM',
-      storage: '1TB Ingestion',
+      storage: '1 TB rotation',
       cpu: '8x Intel vCPU',
       transfer: '16TB/Month Transfer'
     },
@@ -26,7 +26,7 @@ const plans = [
     disk: '960GB NVMe',
     specs: {
       ram: '48GB RAM',
-      storage: '2.5TB Ingestion',
+      storage: '2 TB rotation',
       cpu: '12x Intel vCPU',
       transfer: '24TB/Month Transfer'
     },
@@ -40,7 +40,7 @@ const plans = [
     disk: '1.2TB NVMe',
     specs: {
       ram: '64GB RAM',
-      storage: '5TB Ingestion',
+      storage: '4 TB rotation',
       cpu: '12x Intel vCPU',
       transfer: '32TB/Month Transfer'
     },
