@@ -52,6 +52,10 @@ img[alt*="Founders"] {
     -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.6));
 }
 
+img[alt*="prompt"] {
+    display: inline;
+}
+
 .floating {  
     animation-name: floating;
     animation-duration: 3s;
