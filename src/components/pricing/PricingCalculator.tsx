@@ -14,7 +14,8 @@ const plans = [
       ram: '32GB RAM',
       storage: '1 TB Rotation',
       cpu: '8x Intel vCPU',
-      transfer: '8TB/Month Transfer'
+      transfer: '8TB/Month Transfer',
+      support: 'Email Support'
     },
     price: {
       monthly: 499,
@@ -28,7 +29,8 @@ const plans = [
       ram: '48GB RAM',
       storage: '2 TB Rotation',
       cpu: '10x Intel vCPU',
-      transfer: '16TB/Month Transfer'
+      transfer: '16TB/Month Transfer',
+      support: 'Email Support'
     },
     price: {
       monthly: 999,
@@ -42,7 +44,8 @@ const plans = [
       ram: '64GB RAM',
       storage: '4 TB Rotation',
       cpu: '12x Intel vCPU',
-      transfer: '24TB/Month Transfer'
+      transfer: '24TB/Month Transfer',
+      support: 'Helpdesk Support'
     },
     price: {
       monthly: 1699,
