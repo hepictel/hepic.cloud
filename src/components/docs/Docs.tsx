@@ -55,9 +55,9 @@ const Docs = () => {
                         },
 
                         {
-                            title: "Distributed",
+                            title: "Ubiquitous",
                             details:
-                                "<p className='text-center'>Horizontally Scalable, Distributed Queries</p>",
+                                "<p className='text-center'>Distributed, Clusterable and Horizontally Scalable</p>",
                             icon: "⚗️",
                             span: 3,
                         },
