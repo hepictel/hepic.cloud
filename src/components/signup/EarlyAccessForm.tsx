@@ -104,7 +104,7 @@ export default function EarlyAccessForm() {
   return (
     <div style={containerStyle}>
       <div style={columnLeft}>
-        <h2>Please provide your details</h2><br/>
+        <h2>Please provide your Business details</h2><br/>
         <form onSubmit={handleSubmit} style={formStyle}>
           <input
             type="text"
