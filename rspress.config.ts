@@ -3,7 +3,7 @@ import  path from 'path'
 
 export default defineConfig({
   root: 'docs',
-  base: '/hepic.cloud/',
+  base: '/',
     title: 'hepic.cloud',
   icon: "/hepic_cloud_logo.png",
   logo: {
