@@ -30,7 +30,7 @@ const plans = [
       cpu: '10x Intel vCPU',
       storage: '1.2 TB Storage',
       transfer: '16TB/Month Transfer',
-      support: 'Email Support'
+      support: 'Helpdesk Support'
     },
     price: {
       monthly: 999,
