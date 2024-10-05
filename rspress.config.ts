@@ -14,6 +14,9 @@ export default defineConfig({
   
   globalStyles: path.join(__dirname, 'styles/index.css'),
   themeConfig: {  
+    footer: {
+      message: '<p>Copyright © QXIP BV, All rights reserved</p>'
+    },
     darkMode: true,
     sidebar: {
       '/docs/docs/':[
