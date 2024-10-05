@@ -109,7 +109,7 @@ export default function EarlyAccessForm() {
           <input
             type="text"
             name="name"
-            placeholder="Name *"
+            placeholder="Full Name *"
             required
             value={formData.name}
             onChange={handleChange}
