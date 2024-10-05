@@ -13,6 +13,16 @@ export default defineConfig({
   description: 'hepic.cloud: telecom observability',
   
   globalStyles: path.join(__dirname, 'styles/index.css'),
+  builderConfig: {
+    html: {
+      tags: [
+        {
+          tag: 'script',
+          children: "window.RSPRESS_THEME = 'dark';",
+        },
+      ],
+    },
+  },
   themeConfig: {  
     footer: {
       message: '<p>Copyright © QXIP BV, All rights reserved</p>'
