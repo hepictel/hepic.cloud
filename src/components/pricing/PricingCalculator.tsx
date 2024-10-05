@@ -13,7 +13,7 @@ const plans = [
     specs: {
       ram: '32GB RAM',
       cpu: '8x Intel vCPU',
-      storage: '500 GB Storage',
+      storage: '512 GB Storage',
       transfer: '8TB/Month Transfer',
       support: 'Email Support'
     },
@@ -28,7 +28,7 @@ const plans = [
     specs: {
       ram: '48GB RAM',
       cpu: '10x Intel vCPU',
-      storage: '1 TB Storage',
+      storage: '1.2 TB Storage',
       transfer: '16TB/Month Transfer',
       support: 'Email Support'
     },
@@ -43,13 +43,13 @@ const plans = [
     specs: {
       ram: '64GB RAM',
       cpu: '12x Intel vCPU',
-      storage: '2 TB Storage',
+      storage: '2.4 TB Storage',
       transfer: '24TB/Month Transfer',
       support: 'Helpdesk Support'
     },
     price: {
-      monthly: 1699,
-      yearly: 16900
+      monthly: 1599,
+      yearly: 15900
     }
   }
 ]
