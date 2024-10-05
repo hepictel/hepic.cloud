@@ -34,7 +34,7 @@ const Docs = () => {
                         {
                             title: "Realtime",
                             details:
-                                "<p className='text-center'>Real-Time VoIP Search, Tracking and Analytics</p>",
+                                "<p className='text-center'>Instant VoIP Search, Tracking and Powerful Analytics</p>",
                             icon: "📞",
                             span: 3,
                         },
