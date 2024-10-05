@@ -70,14 +70,14 @@ export default defineConfig({
         text: "Home",
         link: '/'
       },
-      { text: "Demo", 
-        link: "signup" 
-      },
       { text: "About", 
         link: "about" 
       },
-      { text: "Docs", 
-        link: "docs" 
+      { text: "Demo", 
+        link: "signup" 
+      },
+      { text: "Features", 
+        link: "docs/features" 
       },
       { text: "Contact", 
         link: "mailto://info@qxip.net" 
