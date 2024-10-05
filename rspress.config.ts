@@ -47,11 +47,11 @@ export default defineConfig({
         text: "Home",
         link: '/'
       },
-      { text: "About", 
-        link: "about" 
-      },
       { text: "Demo", 
         link: "signup" 
+      },
+      { text: "About", 
+        link: "about" 
       },
       { text: "Docs", 
         link: "docs" 
