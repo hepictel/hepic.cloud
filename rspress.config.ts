@@ -27,19 +27,21 @@ export default defineConfig({
               text: "Get Started",
               link: '/docs'
             },
-            {
-              text: "Key Features",
-              link: '/docs/features'
-            },
           ]
         },
         {
           text: "On-Prem",
           items: [
             {
-              text: "Installation",
+              text: "Get Started",
               link: '/docs/onprem'
-            },
+            }
+          ]
+          
+        },
+        {
+          text: "Documentation",
+          items: [
             {
               text: "Key Features",
               link: '/docs/features'
