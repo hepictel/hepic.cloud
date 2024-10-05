@@ -8,51 +8,51 @@ export const frontmatter = {
 
 const plans = [
   {
-    name: 'Basic',
+    name: 'Dev',
     disk: '640GB NVMe', 
     specs: {
       ram: '32GB RAM',
-      storage: '1TB NVMe',
+      storage: '1TB Ingestion',
       cpu: '8x Intel vCPU',
       transfer: '16TB/Month Transfer'
     },
     price: {
-      monthly: 99,
-      yearly: 990
+      monthly: 499,
+      yearly: 5000
     }
   },
   {
-    name: 'Medium',
+    name: 'Pro',
     disk: '960GB NVMe',
     specs: {
       ram: '48GB RAM',
-      storage: '2TB NVMe',
+      storage: '2.5TB Ingestion',
       cpu: '12x Intel vCPU',
       transfer: '24TB/Month Transfer'
     },
     price: {
-      monthly: 150,
-      yearly: 1500
+      monthly: 999,
+      yearly: 10000
     }
   },
   {
-    name: 'Large',
+    name: 'Enterprise',
     disk: '1.2TB NVMe',
     specs: {
       ram: '64GB RAM',
-      storage: '3TB NVMe',
+      storage: '5TB Ingestion',
       cpu: '12x Intel vCPU',
       transfer: '32TB/Month Transfer'
     },
     price: {
-      monthly: 250,
-      yearly: 2500
+      monthly: 1499,
+      yearly: 14000
     }
   }
 ]
 
-const extraStoragePrice = 50 // per TB per month
-const snapshotsPrice = 25 // per month
+const extraStoragePrice = 100 // per TB per month
+const snapshotsPrice = 50 // per month
 
 const serverLocations = [
   { city: 'Dallas', region: 'US Central', country: 'US', discount: false },
