@@ -12,7 +12,7 @@ const plans = [
     disk: '640GB NVMe', 
     specs: {
       ram: '32GB RAM',
-      storage: '599 GB Storage',
+      storage: '500 GB Storage',
       cpu: '8x Intel vCPU',
       transfer: '8TB/Month Transfer',
       support: 'Email Support'
