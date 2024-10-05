@@ -170,7 +170,7 @@ export default function EarlyAccessForm() {
         </form>
       </div>
       <div style={columnRight}>
-        <h2>Too Curious? Here's a quick interactive demonstration. <img src="https://img.shields.io/badge/Follow%20the%20Prompt%20-8A2BE2"/></h2><br/>
+        <h2>Too Curious? Here's a quick interactive demonstration. <img src="https://img.shields.io/badge/Follow%20the%20Prompt%20-8A2BE2" style="display: inline;"/></h2><br/>
         <SmoothIframe src="https://demo.arcade.software/KGk0X0tSaMv7opJjHbDj?embed" height="550px" />
       </div>
     </div>
