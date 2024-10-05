@@ -101,7 +101,7 @@ img {
         padding-top: 1rem;
 }
 
-.pb-2 {
-    padding-bottom: .5rem;
+/* docs sidebar */
+div[class^='sidebarContent_']]{
     padding-top: 3em;
 }
