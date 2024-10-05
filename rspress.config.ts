@@ -25,7 +25,7 @@ export default defineConfig({
               link: '/docs'
             },
             {
-              text: "Core Features",
+              text: "Key Features",
               link: '/docs/features'
             },
             {
@@ -44,13 +44,13 @@ export default defineConfig({
         text: "Home",
         link: '/'
       },
-      { text: "About Us", 
+      { text: "About", 
         link: "about" 
       },
-      { text: "Demo Request", 
+      { text: "Demo", 
         link: "signup" 
       },
-      { text: "Documentation", 
+      { text: "Docs", 
         link: "docs" 
       },
       { text: "Contact", 
