@@ -17,7 +17,7 @@ export default function Footer() {
 
   return (
     <footer style={{
-      marginTop: '200px',
+      marginTop: '120%',
       backgroundColor: 'transparent',
       color: 'white',
       padding: '0rem',
@@ -38,10 +38,6 @@ export default function Footer() {
         width: '100%'
       }}>
         <p>&copy; 2024 QXIP BV</p>
-        <div>
-          <a href="/legal" style={{ color: 'white', textDecoration: 'none', marginRight: '1rem' }}>Terms</a>
-          <a href="mailto:info@qxip.net" style={{ color: 'white', textDecoration: 'none' }}>Contact Us</a>
-        </div>
       </div>
 
       {!cookieConsent && (
