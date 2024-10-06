@@ -28,18 +28,6 @@ export default function Footer() {
       right: 0
     }}>
       
-      <div style={{
-        borderTop: '1px solid rgba(255, 255, 255, 0.1)',
-        marginTop: '2rem',
-        paddingTop: '1rem',
-        display: 'flex',
-        justifyContent: 'space-between',
-        flexWrap: 'wrap',
-        width: '100%'
-      }}>
-        <p>&copy; 2024 QXIP BV</p>
-      </div>
-
       {!cookieConsent && (
         <div style={{
           position: 'fixed',
