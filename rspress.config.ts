@@ -87,7 +87,7 @@ export default defineConfig({
       {
         icon: 'github',
         mode: 'link',
-        content: 'https://github.com/qxip',
+        content: 'https://github.com/sipcapture',
       },
       {
         icon: 'linkedin',
@@ -95,9 +95,9 @@ export default defineConfig({
         content: 'https://www.linkedin.com/company/qxip',
       },
       {
-        icon: { svg: `<image src="https://user-images.githubusercontent.com/1423657/55069501-8348c400-5084-11e9-9931-fefe0f9874a7.png" style="filter: grayscale(1);"/>`},
+        icon: { svg: `<image src="/qxip_little.png" style="filter: grayscale(1);"/>`},
         mode: 'link',
-        content: 'https://sipcapture.org',
+        content: 'https://qxip.net',
       },
     ],
   },
