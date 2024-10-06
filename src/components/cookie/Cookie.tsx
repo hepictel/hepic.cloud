@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-export default function Footer() {
+export default function Cookie() {
   const [cookieConsent, setCookieConsent] = useState(true);
 
   useEffect(() => {
