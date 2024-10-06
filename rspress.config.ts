@@ -11,7 +11,6 @@ export default defineConfig({
     dark: "/hepic_logo.svg",
   },
   description: 'hepic.cloud: telecom observability',
-  
   globalStyles: path.join(__dirname, 'styles/index.css'),
   builderConfig: {
     html: {
@@ -25,7 +24,8 @@ export default defineConfig({
   },
   themeConfig: {  
     footer: {
-      message: '<p>Copyright © QXIP BV, All rights reserved</p>'
+      message: '<p>All rights reserved</p>',
+      copyright: '<p>© QXIP BV</p>'
     },
     darkMode: true,
     sidebar: {
