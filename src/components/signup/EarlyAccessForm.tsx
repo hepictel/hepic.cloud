@@ -22,7 +22,7 @@ export default function EarlyAccessForm() {
     return formData.name && formData.company && formData.email && formData.package
   }
 
-  const FORM_URL = "https://script.google.com/macros/s/AKfycbypIQWKvFDiAVAQZZCWlFGdU61YdXr9WKLHrH7DJqnC7fURvKX4qBu0W4dzmaEu3Yx69g/exec"
+  const FORM_URL = "https://script.google.com/macros/s/AKfycbw7dxF6ELiE80qVNJqb4eOlHw5M5bHKP_FKofXOC5Gpg_oufXQEvzODpxjvLw6Xz7Ki/exec"
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault()
