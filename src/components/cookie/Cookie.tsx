@@ -17,7 +17,6 @@ export default function Cookie() {
 
   return (
     <footer style={{
-      marginTop: '120%',
       backgroundColor: 'transparent',
       color: 'white',
       padding: '0rem',
