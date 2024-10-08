@@ -22,10 +22,7 @@ export default defineConfig({
       ],
     },
   },
-  footer: {
-      message: '<p>All rights reserved</p>',
-      copyright: '<p>© QXIP BV</p>'
-  },
+
   themeConfig: {  
     darkMode: true,
     sidebar: {
