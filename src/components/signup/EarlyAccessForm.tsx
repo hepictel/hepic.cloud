@@ -52,6 +52,7 @@ export default function EarlyAccessForm() {
   const containerStyle: React.CSSProperties = {
     display: 'flex',
     justifyContent: 'space-between',
+    width:'100%',
     gap: '2rem',
     minWidth: '130%',
     margin: '0 auto',

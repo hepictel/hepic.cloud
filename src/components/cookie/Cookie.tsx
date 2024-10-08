@@ -16,7 +16,7 @@ export default function Cookie() {
   };
 
   return (
-    <footer style={{
+    <div style={{
       backgroundColor: 'transparent',
       color: 'white',
       padding: '0rem',
@@ -28,19 +28,7 @@ export default function Cookie() {
     }}>
       
       {!cookieConsent && (
-        <div style={{
-          position: 'fixed',
-          bottom: 0,
-          left: 0,
-          right: 0,
-          backgroundColor: 'rgba(0, 0, 0, 0.9)',
-          color: 'white',
-          padding: '1rem',
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          zIndex: 1000
-        }}>
+        <div className="fixed bottom-0 left-0 right-0 bg-slate-950 text-white p-4 px-6 flex align-middle justify-between z-100">
           <p style={{ margin: 0, flex: 1 }}>
             We use cookies to improve your experience on our site. By continuing to use our site, you agree to our use of cookies.
           </p>
@@ -60,6 +48,6 @@ export default function Cookie() {
           </button>
         </div>
       )}
-    </footer>
+    </div>
   );
 }

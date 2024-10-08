@@ -1,9 +1,8 @@
-import React from "react";
 import { HomeHero, HomeFeature } from "rspress/theme";
 
 const Docs = () => {
     return (
-        <div style={{ position: "absolute", width: "100%", left: 0, top: 75 }}>
+        <div className="ml-[-200px] mr-[-200px] p-0">
             <HomeHero
                 frontmatter={{
                     title: "hepic.cloud",
@@ -14,8 +13,16 @@ const Docs = () => {
                         tagline: "Next-Gen Telecom Observability",
                         actions: [
                             { text: "About Us", link: "/about", theme: "alt" },
-                            { text: "Features", link: "/docs/features", theme: "alt" },
-                            { text: "Book a Demo", link: "/signup", theme: "brand" },
+                            {
+                                text: "Features",
+                                link: "/docs/features",
+                                theme: "alt",
+                            },
+                            {
+                                text: "Book a Demo",
+                                link: "/signup",
+                                theme: "brand",
+                            },
                         ],
                         image: {
                             src: "/hepic_cloud_logo.png",
