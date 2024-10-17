@@ -150,9 +150,9 @@ export default function EarlyAccessForm() {
             style={inputStyle}
           >
             <option value="">Current Status *</option>
-            <option value="basic">No Monitoring</option>
-            <option value="medium">Monitoring, HOMER</option>
-            <option value="large">Monitoring, Other Vendor</option>
+            <option value="No Monitoring">No Monitoring</option>
+            <option value="Monitoring, HOMER">Monitoring, HOMER</option>
+            <option value="Monitoring, Other Vendor">Monitoring, Other Vendor</option>
           </select>
           <textarea
             name="comments"
