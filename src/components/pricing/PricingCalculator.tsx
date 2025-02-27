@@ -18,8 +18,8 @@ const plans = [
       support: 'Email Support'
     },
     price: {
-      monthly: 499,
-      yearly: 4990
+      monthly: 999,
+      yearly: 9900
     }
   },
   {
@@ -33,8 +33,8 @@ const plans = [
       support: 'Helpdesk Support'
     },
     price: {
-      monthly: 999,
-      yearly: 9900
+      monthly: 1599,
+      yearly: 15900
     }
   },
   {
@@ -48,8 +48,8 @@ const plans = [
       support: 'Helpdesk Support'
     },
     price: {
-      monthly: 1599,
-      yearly: 15900
+      monthly: 2599,
+      yearly: 25900
     }
   }
 ]
