@@ -8,29 +8,14 @@ export const frontmatter = {
 
 const plans = [
   {
-    name: 'Dev',
-    disk: '640GB NVMe', 
+    name: 'Startup',
+    plan: 'CCX33', 
     specs: {
-      ram: '32GB RAM',
+      ram: '16GB RAM',
       cpu: '8x Intel vCPU',
       storage: '512 GB Storage',
       transfer: '8TB/Month Transfer',
       support: 'Email Support'
-    },
-    price: {
-      monthly: 999,
-      yearly: 9900
-    }
-  },
-  {
-    name: 'Pro',
-    disk: '960GB NVMe',
-    specs: {
-      ram: '48GB RAM',
-      cpu: '10x Intel vCPU',
-      storage: '1.2 TB Storage',
-      transfer: '16TB/Month Transfer',
-      support: 'Helpdesk Support'
     },
     price: {
       monthly: 1599,
@@ -39,17 +24,32 @@ const plans = [
   },
   {
     name: 'Enterprise',
-    disk: '1.2TB NVMe',
+    plan: 'CCX43',
     specs: {
-      ram: '64GB RAM',
-      cpu: '12x Intel vCPU',
-      storage: '2.4 TB Storage',
-      transfer: '24TB/Month Transfer',
+      ram: '32GB RAM',
+      cpu: '16x Intel vCPU',
+      storage: '1.2 TB Storage',
+      transfer: '10TB/Month Transfer',
       support: 'Helpdesk Support'
     },
     price: {
       monthly: 2599,
       yearly: 25900
+    }
+  },
+  {
+    name: 'Carrier',
+    plan: 'CCX53',
+    specs: {
+      ram: '64GB RAM',
+      cpu: '32x Intel vCPU',
+      storage: '2.4 TB Storage',
+      transfer: '20TB/Month Transfer',
+      support: 'Helpdesk Support'
+    },
+    price: {
+      monthly: 3599,
+      yearly: 35900
     }
   }
 ]
@@ -58,20 +58,12 @@ const extraStoragePrice = 150 // per TB per month
 const snapshotsPrice = 50 // per month
 
 const serverLocations = [
-  { city: 'Dallas', region: 'US Central', country: 'US', discount: false },
-  { city: 'Atlanta', region: 'US East', country: 'US', discount: false },
-  { city: 'Los Angeles', region: 'US West', country: 'US', discount: false },
-  { city: 'Chicago', region: 'US Central', country: 'US', discount: false },
-  { city: 'Seattle', region: 'US West', country: 'US', discount: false },
-  { city: 'New York', region: 'US East', country: 'US', discount: false },
-  { city: 'Frankfurt', region: 'Germany', country: 'DE', discount: false },
-  { city: 'Amsterdam', region: 'Netherlands', country: 'NL', discount: false },
-  { city: 'London', region: 'England', country: 'GB', discount: false },
-  { city: 'Mumbai', region: 'India', country: 'IN', discount: false },
-  { city: 'Tokyo', region: 'Japan', country: 'JP', discount: false },
-  { city: 'Singapore', region: 'Singapore', country: 'SG', discount: false },
-  { city: 'Sydney', region: 'Australia', country: 'AU', discount: false },
-  { city: 'Toronto', region: 'Canada', country: 'CA', discount: false }
+  { city: 'FSN1', region: 'Germany', country: 'EU', discount: false, bandw: 1  },
+  { city: 'NBG', region: 'Germany', country: 'EU', discount: false, bandw: 1 },
+  { city: 'HEL1', region: 'Finland', country: 'EU', discount: false, bandw: 1 },
+  { city: 'SIN1', region: 'Singapore', country: 'APAC', discount: false, bandw: 0.1  },  
+  { city: 'HIL', region: 'US West', country: 'US', discount: false, bandw: 0.1 },
+  { city: 'ASH', region: 'US East', country: 'US', discount: false, bandw: 0.1 },
 ]
 
 const PricingCalculator: React.FC = () => {
